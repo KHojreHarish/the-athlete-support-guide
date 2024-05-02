@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #cfc7c7;
+  border: 1px solid #cacaca;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ff3f01;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #cacaca;
+  background: #ff3f01;
+}
+
+::selection {
+  color: #cacaca;
+  background: #ff3f01;
+}
+
+.wavy-line {
+  border-bottom: 5px solid orange;
+  width: 100%;
+  animation: wave 4s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.defensive-svg {
+  width: 299px;
+  height: 93px;
+}
+
+.defensive-path {
+  stroke: #ff3f01;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+  animation: draw 7s ease forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 0 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dasharray: 1000 1000;
+    stroke-dashoffset: 0;
+  }
+}
