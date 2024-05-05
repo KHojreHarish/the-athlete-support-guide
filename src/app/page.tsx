@@ -1,9 +1,16 @@
 "use client";
 import { roboto } from "../config/fonts";
-import { Button, Input, Select, SelectItem } from "@nextui-org/react";
+import { Button, Image, Input, Select, SelectItem } from "@nextui-org/react";
 import {
+  BasketBall,
   BoxList,
   CheckedSymbol,
+  Dumbbell,
+  ExpertImg,
+  ExpertImg2,
+  ExpertImg3,
+  ExpertImg4,
+  FootBall,
   HalfStarSymbol,
   HeroImg,
   HeroimgLines,
@@ -12,11 +19,19 @@ import {
   HighlightCard1Img,
   HighlightCard2Img,
   HighlightCard3Img,
+  InformalLearning,
+  MentalWellness,
+  Mobility,
+  Rugby,
+  Service1Img,
   Star,
   StarSymbol,
   UserVerified,
+  WeightLifting,
 } from "@/components/icons";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 import { useEffect } from "react";
+import NextImage from "next/image";
 
 const animals = [
   {
@@ -83,9 +98,9 @@ export default function Home() {
   return (
     <>
       {/* Hero section */}
-      <div className="flex flex-wrap p-[5%] pr-[0%] justify- gap-0">
-        <div className="flex flex-col w-[38rem] h-[30rem] ">
-          <h1 className=" h-[12rem] w-[34rem] text-[3.125rem] font-bold leading-[3.75rem] ">
+      <div className="flex flex-wrap p-[5%] pr-[0%] justify-around gap-0">
+        <div className="flex flex-col h-fit min-w-[42vw] mr-12  ">
+          <h1 className="  text-[5rem] w-full font-bold leading-[5rem] ">
             Find Your Edge.
             <br /> Athlete <span className=" text-[#FF3F01] ">
               Mentorship
@@ -94,13 +109,14 @@ export default function Home() {
             <span className=" text-[#FF3F01] ">Pro</span> Services
           </h1>
           <h3
-            className={` font-[2rem] w-[36rem] text-[#74788D]  ${roboto.className} `}
+            className={` text-[1.7rem] mt-4 text-[#74788D]  ${roboto.className} `}
           >
             Unlock Your Potential with Athlete Mentors & Sporting Professionals.
-            We’ve helped over 10,000+ athletes achieve their goals. Find the
-            perfect service for your journey.
+            <br />
+            We’ve helped over 10,000+ athletes achieve their goals.
+            <br /> Find the perfect service for your journey.
           </h3>
-          <form className=" w-[34rem] h-[4.25rem] flex items-center p-2 mt-[1rem] border-[2px] border-[#E1E1E1] rounded-[30px] ">
+          <form className="  flex items-center p-2 mt-4 border-[2px] border-[#f0ecec7d] rounded-[30px] ">
             {" "}
             <Select
               items={animals}
@@ -169,7 +185,12 @@ export default function Home() {
               isClearable
               isRequired
             />
-            <Button type="submit" className=" m-2 bg-[#FF3F01]" radius="full">
+            <Button
+              type="submit"
+              size="lg"
+              className=" m-2 bg-[#FF3F01]"
+              radius="full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -184,7 +205,7 @@ export default function Home() {
               </svg>
             </Button>
           </form>
-          <div className="flex w-[70%] p-[3%] justify-between">
+          <div className="flex w-full sm:w-[70%] m-4 justify-between">
             <div className=" flex flex-col">
               <BoxList /> <h5 className=" font-bold  mt-4">3000+</h5>{" "}
               <h6 className=" font-[100] ">Services</h6>
@@ -201,13 +222,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-center items-center   min-w-[10.5rem] min-h-[100%] ">
-          <div className=" w-[13.6rem] h-[25.6rem] relative ">
-            <HeroImg />
+        <div className=" flex justify-center m-4 mt-0 h-fit w-fit ">
+          <div className=" w-[20.6rem] h-[35.6rem] relative ">
+            <div className=" w-full h-full overflow-hidden ">
+              <HeroImg />
+            </div>
             <div className="flex  max-w-fit max-h-fit absolute top-[-20px] left-[-35px] ">
               <HeroimgLines />
             </div>
-            <div className="  max-w-fit max-h-fit absolute top-[-60px] right-[-90px] ">
+            <div className="  max-w-fit max-h-fit absolute top-[-82px] right-[-64px] ">
               <HeroimgLines2 />
             </div>
             <div className="  max-w-fit max-h-fit absolute bottom-[-125px] left-[-20px] hidden md:flex  ">
@@ -215,11 +238,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center min-w-[30rem]  ml-2 pt-12">
-          <h1 className=" text-[3rem] w-[15rem] h-[15rem ] leading-[3.6rem]  relative ">
+        <div className="flex flex-col items-center w-[35rem] ml-2 ">
+          <h1 className=" text-[4rem] h-[15rem ] font-[500] flex flex-col leading-[4.8rem] relative ">
             <span className=" relative">
               <svg
-                className="defensive-svg absolute top-[-5px] left-[-32px]"
+                className="defensive-svg absolute top-[-10px] left-[-32px]"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 299 93"
               >
@@ -231,14 +254,15 @@ export default function Home() {
               Defensive
             </span>{" "}
             Player
-            <br /> of the Year
+            <br /> of the
+            <br /> Year
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
               height="188"
               viewBox="0 0 25 188"
               fill="none"
-              className=" absolute right-[3rem] top-[5.5rem] "
+              className=" absolute right-[4rem] top-[7.5rem] "
             >
               <path
                 d="M2.00001 2.50815C7.90801 30.679 20.2046 106.692 22.1271 185.379"
@@ -248,13 +272,13 @@ export default function Home() {
               />
             </svg>
           </h1>
-          <h1 className=" text-[2rem] mt-[2rem] mr-[-40%] ">
+          <h1 className=" text-[2rem] mt-[4rem] mr-[-40%] ">
             *it takes a team
           </h1>
-          <div className=" flex  mt-2  ">
-            <div className=" flex flex-col items-center w-[10rem] h-[12rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 p-2">
+          <div className=" flex  mt-2 flex-wrap justify-center">
+            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
               <HighlightCard1Img />
-              <div className=" text-[0.5rem] w-[139px] relative">
+              <div className=" text-[0.5rem] w-full  relative ">
                 <h1 className="flex items-center font-bold mb-1 ">
                   Jo Smith{" "}
                   <span className=" m-2">
@@ -275,9 +299,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col w-[10rem] h-[12rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 p-2 ">
-              <HighlightCard2Img />{" "}
-              <div className=" text-[0.5rem] w-[139px] relative">
+            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <HighlightCard2Img />
+              <div className=" text-[0.5rem] w-full  relative  ">
                 <h1 className="flex items-center font-bold mb-1 ">
                   Michael{" "}
                   <span className=" m-2">
@@ -298,16 +322,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col w-[10rem] h-[12rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 p-2 ">
-              <HighlightCard3Img />{" "}
-              <div className=" text-[0.5rem] w-[139px] relative">
+            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <HighlightCard3Img />
+              <div className=" text-[0.5rem] w-full  relative ">
                 <h1 className="flex items-center font-bold mb-1 ">
                   Antoinette{" "}
                   <span className=" m-2">
                     <CheckedSymbol />
                   </span>
                 </h1>
-
                 <p className=" mb-1">Parent requiring expertise and support</p>
               </div>
             </div>
@@ -315,9 +338,604 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Featured Section */}
-      <div className=" border-2 border-black">
-        <h1>Featured Sports</h1>
+      <div className=" p-[10%] pt-0 pb-[2%] ">
+        <div className=" p-[10%] pt-[6%] pb-[2%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center ">
+            <div>
+              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+                Featured Sports
+              </h1>
+              <p className=" text-[#74788D] ">what do you need to find?</p>
+            </div>
+            <Button
+              size="lg"
+              color="primary"
+              radius="none"
+              className=" rounded bg-[#FF3F01] pr-[4rem] "
+            >
+              View all
+            </Button>
+          </div>
+          <div className="flex justify-center items-center flex-wrap p-2 ">
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <BasketBall />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">BasketBall</div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <FootBall />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Soccer/Football</div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <Rugby />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Rugby League</div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <WeightLifting />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Weight Lifting</div>
+            </div>
+          </div>
+        </div>
+
+        <div className=" p-[10%] pt-[2%] pb-[2%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center ">
+            <div>
+              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+                Featured Services
+              </h1>
+              <p className=" text-[#74788D] ">What do you need to find?</p>
+            </div>
+            <Button
+              size="lg"
+              color="primary"
+              radius="none"
+              className=" rounded bg-[#FF3F01] pr-[4rem] "
+            >
+              View all
+            </Button>
+          </div>
+          <div className="flex justify-center items-center flex-wrap p-2 ">
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <InformalLearning />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 text-center ">
+                Athlete to Athlete
+                <br /> Mentorship{" "}
+              </div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <Dumbbell />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Strength</div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <Mobility />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Mobility</div>
+            </div>
+
+            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+                <MentalWellness />
+              </div>
+              <div className=" text-[1rem] font-bold m-3 ">Mental Wellness</div>
+            </div>
+          </div>
+        </div>
+
+        <div className=" p-[10%] pt-[2%] pb-[2%]  flex flex-col h-fit ">
+          <div className=" flex justify-between items-center ">
+            <div>
+              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+                Featured Services Near You
+              </h1>
+              <p className=" text-[#74788D] ">
+                Explore the greates our services. You won’t be disappointed
+              </p>
+            </div>
+            <div>
+              <Button radius="full" size="lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                  />
+                </svg>
+              </Button>
+              <Button
+                size="lg"
+                radius="full"
+                endContent={
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                }
+              />
+            </div>
+          </div>
+          <div className="flex justify-center items-center flex-wrap p-2 ">
+            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
+              <div className=" w-full  ">
+                <Service1Img />
+              </div>
+              <div className=" flex flex-col p-4">
+                <div className=" text-xl font-bold w-[70%] ">
+                  Professional Soccer Player Video Analysis 30 mins
+                </div>
+                <div className=" flex justify-between h-8 ">
+                  {" "}
+                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                    New Jersey, USA
+                  </div>
+                  <span className=" flex ">
+                    <Image
+                      as={NextImage}
+                      width={1400}
+                      height={1400}
+                      src="/StarSymbol.svg"
+                      alt="hero-img"
+                      radius="none"
+                      className=" w-full h-4 "
+                    />
+                    4.9
+                  </span>
+                </div>
+                <div className="flex justify-between mt-3 ">
+                  <div className=" text-xl font-bold ">
+                    $25.00
+                    <span className=" text-sm font-light line-through ">
+                      $35.00
+                    </span>
+                  </div>{" "}
+                  <Button
+                    radius="none"
+                    size="sm"
+                    className=" text-[#FF3F01] rounded  m-0 "
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
+              <div className=" w-full  ">
+                <Service1Img />
+              </div>
+              <div className=" flex flex-col p-4">
+                <div className=" text-xl font-bold w-[70%] ">
+                  Professional Soccer Player Video Analysis 30 mins
+                </div>
+                <div className=" flex justify-between h-8 ">
+                  {" "}
+                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                    New Jersey, USA
+                  </div>
+                  <span className=" flex ">
+                    <Image
+                      as={NextImage}
+                      width={1400}
+                      height={1400}
+                      src="/StarSymbol.svg"
+                      alt="hero-img"
+                      radius="none"
+                      className=" w-full h-4 "
+                    />
+                    4.9
+                  </span>
+                </div>
+                <div className="flex justify-between mt-3 ">
+                  <div className=" text-xl font-bold ">
+                    $25.00
+                    <span className=" text-sm font-light line-through ">
+                      $35.00
+                    </span>
+                  </div>{" "}
+                  <Button
+                    radius="none"
+                    size="sm"
+                    className=" text-[#FF3F01] rounded  m-0 "
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
+              <div className=" w-full  ">
+                <Service1Img />
+              </div>
+              <div className=" flex flex-col p-4">
+                <div className=" text-xl font-bold w-[70%] ">
+                  Professional Soccer Player Video Analysis 30 mins
+                </div>
+                <div className=" flex justify-between h-8 ">
+                  {" "}
+                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                    New Jersey, USA
+                  </div>
+                  <span className=" flex ">
+                    <Image
+                      as={NextImage}
+                      width={1400}
+                      height={1400}
+                      src="/StarSymbol.svg"
+                      alt="hero-img"
+                      radius="none"
+                      className=" w-full h-4 "
+                    />
+                    4.9
+                  </span>
+                </div>
+                <div className="flex justify-between mt-3 ">
+                  <div className=" text-xl font-bold ">
+                    $25.00
+                    <span className=" text-sm font-light line-through ">
+                      $35.00
+                    </span>
+                  </div>{" "}
+                  <Button
+                    radius="none"
+                    size="sm"
+                    className=" text-[#FF3F01] rounded  m-0 "
+                  >
+                    Book Now
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className=" flex w-full justify-center items-center ">
+            <Button
+              size="lg"
+              color="primary"
+              radius="none"
+              className=" rounded bg-[#FF3F01] pr-[4rem] "
+            >
+              View all
+            </Button>
+          </div>
+        </div>
+
+        <div className=" p-[10%] pt-[2%] pb-[2%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center ">
+            <div>
+              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+                Top Providers
+              </h1>
+              <p className=" text-[#74788D] ">Meet Our Experts</p>
+            </div>
+            <Button
+              size="lg"
+              color="primary"
+              radius="none"
+              className=" rounded bg-[#FF3F01] pr-[4rem] "
+            >
+              View all
+            </Button>
+          </div>
+          <div className="flex justify-center items-center flex-wrap p-2 ">
+            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <ExpertImg />
+              <div className=" text-[0.5rem] w-full  relative ">
+                <div className=" flex justify-between mb-2 mt-3 ">
+                  <div>
+                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                      Jo Smith{" "}
+                      <span className="">
+                        <CheckedSymbol />
+                      </span>
+                    </h1>
+                    <p className=" text-[0.7rem] text-[#74788D] mt-1 mb-3 ">
+                      Recovery Therapist
+                    </p>
+                  </div>
+
+                  <p className=" mt-2 font-bold text-[0.8rem] ">
+                    $20.00<span>/hr</span>
+                  </p>
+                </div>
+
+                <div className="flex items-center text-sm ">
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/HalfStarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  (320)
+                </div>
+              </div>
+            </div>
+            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <ExpertImg2 />
+              <div className=" text-[0.5rem] w-full  relative ">
+                <div className=" flex justify-between mb-2 mt-3 ">
+                  <div>
+                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                      Michael
+                      <span className="">
+                        <CheckedSymbol />
+                      </span>
+                    </h1>
+                    <p className=" text-[0.7rem] text-[#74788D] mt-1 mb-3 ">
+                      Mobility
+                    </p>
+                  </div>
+
+                  <p className=" mt-2 font-bold text-[0.8rem] ">
+                    $50.00<span>/hr</span>
+                  </p>
+                </div>
+
+                <div className="flex items-center text-sm ">
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/HalfStarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  (228)
+                </div>
+              </div>
+            </div>
+            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <ExpertImg3 />
+              <div className=" text-[0.5rem] w-full  relative ">
+                <div className=" flex justify-between mb-2 mt-3 ">
+                  <div>
+                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                      Antoinette
+                      <span className="">
+                        <CheckedSymbol />
+                      </span>
+                    </h1>
+                    <p className=" text-[0.7rem] text-[#74788D] mt-1 mb-3 ">
+                      Video Analysis
+                    </p>
+                  </div>
+
+                  <p className=" mt-2 font-bold text-[0.8rem] ">
+                    $25.00<span>/hr</span>
+                  </p>
+                </div>
+
+                <div className="flex items-center text-sm ">
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/HalfStarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  (130)
+                </div>
+              </div>
+            </div>
+            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+              <ExpertImg4 />
+              <div className=" text-[0.5rem] w-full  relative ">
+                <div className=" flex justify-between mb-2 mt-3 ">
+                  <div>
+                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                      Thompson
+                      <span className="">
+                        <CheckedSymbol />
+                      </span>
+                    </h1>
+                    <p className=" text-[0.7rem] text-[#74788D] mt-1 mb-3 ">
+                      Conditioning
+                    </p>
+                  </div>
+
+                  <p className=" mt-2 font-bold text-[0.8rem] ">
+                    $25.00<span>/hr</span>
+                  </p>
+                </div>
+
+                <div className="flex items-center text-sm ">
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/StarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  <Image
+                    as={NextImage}
+                    width={100}
+                    height={100}
+                    src="/HalfStarSymbol.svg"
+                    alt="hero-img"
+                    radius="none"
+                    className=" w-4 h-4 "
+                  />
+                  (95)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" w-full h-[46rem] p-8 bg-[#FFF9F9] ">
+        <div></div>
       </div>
     </>
   );
