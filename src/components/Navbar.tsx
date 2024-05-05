@@ -36,7 +36,7 @@ const NavbarComponent = () => {
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
       isBlurred={true}
-      height={6}
+      height={"5rem"}
       className={`${roboto.className} drop-shadow-xl bg-[#fff]`}
     >
       <NavbarContent className="md:hidden" justify="start">
@@ -51,12 +51,12 @@ const NavbarComponent = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarBrand className="hidden md:flex gap-4  xl:ml-[-29%] xl:mr-[20%] ">
+      <NavbarBrand className="hidden md:flex gap-4 ">
         <TaspLogo />
       </NavbarBrand>
 
       <NavbarContent
-        className="hidden md:flex gap-4 sm:gap-8 "
+        className="hidden md:flex md:gap-5 lg:gap-10 sm:gap-8 "
         justify="center"
       >
         <Dropdown>
@@ -64,7 +64,7 @@ const NavbarComponent = () => {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-2xl"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent  md:text-[1.3rem] lg:text-[1.5rem] "
                 endContent={<ChevronDown />}
                 radius="sm"
                 variant="light"
@@ -114,35 +114,49 @@ const NavbarComponent = () => {
         </Dropdown>
 
         <NavbarItem>
-          <Link color="foreground" href="#" className=" text-2xl">
+          <Link
+            color="foreground"
+            href="#"
+            className=" md:text-[1.3rem] lg:text-[1.5rem]"
+          >
             Hire Your Support
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link style={{ color: "#FF3F01" }} href="#" className=" text-2xl">
+          <Link
+            style={{ color: "#FF3F01" }}
+            href="#"
+            className=" md:text-[1.3rem] lg:text-[1.5rem]"
+          >
             Share Your Expertise
           </Link>
         </NavbarItem>
-        <NavbarItem className=" text-2xl">
+        <NavbarItem className=" md:text-[1.3rem] lg:text-[1.5rem]">
           <button>Login Now</button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end" className=" xl:mr-[-15%] xl:ml-[15%] ">
-        <NavbarItem className=" text-2xl">
+        <NavbarItem>
           <Button
             as={Link}
             style={{ backgroundColor: "#FF3F01", color: "white" }}
             href="#"
+            size="lg"
             variant="flat"
             startContent={<ProfileIcon />}
-            className=" rounded-sm"
+            className=" rounded-sm md:text-[1rem] lg:text-[1.5rem]"
           >
             Join Now
           </Button>
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex text-2xl">
-          <Link href="#" color="foreground" underline="hover">
+        <NavbarItem className="hidden lg:flex ">
+          <Link
+            href="#"
+            color="foreground"
+            underline="hover"
+            className=" text-[1.5rem] "
+          >
             Register
           </Link>
         </NavbarItem>
