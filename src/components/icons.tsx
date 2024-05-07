@@ -5,11 +5,10 @@ import NextImage from "next/image";
 export const TaspLogo = () => (
   <Image
     as={NextImage}
-    width={128}
-    height={50}
+    width={1000}
+    height={1050}
     src="/logo.svg"
     alt="Logo"
-    priority
     className=" w-auto h-auto"
   />
 );
