@@ -150,7 +150,7 @@ const NavbarComponent = () => {
             size="md"
             variant="flat"
             startContent={<ProfileIcon />}
-            className=" rounded-sm md:text-[1rem] lg:text-[1rem]"
+            className=" rounded-[5px] md:text-[1rem] lg:text-[1rem]"
           >
             Join Now
           </Button>

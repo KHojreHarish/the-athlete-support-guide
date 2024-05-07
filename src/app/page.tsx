@@ -98,9 +98,9 @@ export default function Home() {
   return (
     <>
       {/* Hero section */}
-      <div className="flex flex-wrap p-[5%] pr-[0%] justify-around gap-0">
-        <div className="flex flex-col h-fit min-w-[42vw] mr-12  ">
-          <h1 className="  text-[5rem] w-full font-bold leading-[5rem] ">
+      <div className="flex flex-wrap p-[5vw] pr-0 justify-around xl:justify-center gap-0 ">
+        <div className="flex flex-col h-[30rem] w-[35rem] lg:mr-12 ">
+          <h1 className=" text-[3rem] w-full font-bold leading-[3.5rem] ">
             Find Your Edge.
             <br /> Athlete <span className=" text-[#FF3F01] ">
               Mentorship
@@ -109,7 +109,7 @@ export default function Home() {
             <span className=" text-[#FF3F01] ">Pro</span> Services
           </h1>
           <h3
-            className={` text-[1.7rem] mt-4 text-[#74788D]  ${roboto.className} `}
+            className={` text-[1rem] mt-4 text-[#74788D]  ${roboto.className} `}
           >
             Unlock Your Potential with Athlete Mentors & Sporting Professionals.
             <br />
@@ -222,24 +222,26 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-center m-4 mt-0 h-fit w-fit ">
-          <div className=" w-[20.6rem] h-[35.6rem] relative ">
+
+        <div className=" flex justify-center h-fit w-fit md:w-[25rem] lg:w-fit border-3 ">
+          <div className=" w-[13.5rem] h-[25.6rem] relative ">
             <div className=" w-full h-full overflow-hidden ">
               <HeroImg />
             </div>
             <div className="flex  max-w-fit max-h-fit absolute top-[-20px] left-[-35px] ">
               <HeroimgLines />
             </div>
-            <div className="  max-w-fit max-h-fit absolute top-[-82px] right-[-64px] ">
+            <div className="  max-w-fit max-h-fit absolute top-[-65px] right-[-90px]  ">
               <HeroimgLines2 />
             </div>
-            <div className="  max-w-fit max-h-fit absolute bottom-[-125px] left-[-20px] hidden md:flex  ">
+            <div className="  max-w-fit max-h-fit absolute left-[-10px] hidden md:flex z-10 ">
               <HeroimgLines3 />
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center w-[35rem] ml-2 ">
-          <h1 className=" text-[4rem] h-[15rem ] font-[500] flex flex-col leading-[4.8rem] relative ">
+
+        <div className="flex flex-col items-center ">
+          <h1 className=" text-[3rem] h-[15rem ] font-[500] flex flex-col leading-[3.6rem] relative ">
             <span className=" relative">
               <svg
                 className="defensive-svg absolute top-[-10px] left-[-32px]"
@@ -259,24 +261,24 @@ export default function Home() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
-              height="188"
+              height="175"
               viewBox="0 0 25 188"
               fill="none"
-              className=" absolute right-[4rem] top-[7.5rem] "
+              className=" absolute right-[50px] top-[80px] "
             >
               <path
                 d="M2.00001 2.50815C7.90801 30.679 20.2046 106.692 22.1271 185.379"
                 stroke="#FF3F01"
-                strokeWidth="4"
+                strokeWidth="3"
                 strokeLinecap="round"
               />
             </svg>
           </h1>
-          <h1 className=" text-[2rem] mt-[4rem] mr-[-40%] ">
+          <h1 className=" text-[2rem] font-[400] mt-[1rem] mr-[-25%] ">
             *it takes a team
           </h1>
-          <div className=" flex  mt-2 flex-wrap justify-center">
-            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+          <div className=" flex  flex-wrap justify-center">
+            <div className=" flex flex-col items-center w-[10rem] h-[11.6rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <HighlightCard1Img />
               <div className=" text-[0.5rem] w-full  relative ">
                 <h1 className="flex items-center font-bold mb-1 ">
@@ -299,7 +301,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+            <div className=" flex flex-col items-center w-[10rem] h-[11.6rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <HighlightCard2Img />
               <div className=" text-[0.5rem] w-full  relative  ">
                 <h1 className="flex items-center font-bold mb-1 ">
@@ -322,7 +324,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center w-[10rem] h-[14rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+            <div className=" flex flex-col items-center w-[10rem] h-[11.6rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <HighlightCard3Img />
               <div className=" text-[0.5rem] w-full  relative ">
                 <h1 className="flex items-center font-bold mb-1 ">

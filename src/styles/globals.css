@@ -53,7 +53,7 @@
 
 .defensive-path {
   stroke: #ff3f01;
-  stroke-width: 3;
+  stroke-width: 2;
   stroke-linecap: round;
   fill: none;
   animation: draw 7s ease forwards;
