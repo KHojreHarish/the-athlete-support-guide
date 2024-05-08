@@ -208,22 +208,22 @@ export default function Home() {
           <div className="flex w-full sm:w-[70%] m-4 justify-between">
             <div className=" flex flex-col">
               <BoxList /> <h5 className=" font-bold  mt-4">3000+</h5>{" "}
-              <h6 className=" font-[100] ">Services</h6>
+              <h6 className=" font-[300] ">Services</h6>
             </div>
             <div className=" flex flex-col">
               <UserVerified />
               <h5 className=" font-bold  mt-4">900+</h5>{" "}
-              <h6 className=" font-[100] ">Athlete Mentors</h6>
+              <h6 className=" font-[300] ">Athlete Mentors</h6>
             </div>
             <div className=" flex flex-col">
               <Star />
               <h5 className=" font-bold  mt-4">15k Review</h5>{" "}
-              <h6 className=" font-[100] ">(4.8)</h6>
+              <h6 className=" font-[300] ">(4.8)</h6>
             </div>
           </div>
         </div>
 
-        <div className=" flex justify-center h-fit w-fit md:w-[25rem] lg:w-fit border-3 ">
+        <div className=" flex justify-center h-fit w-fit md:w-[25rem] lg:w-fit ">
           <div className=" w-[13.5rem] h-[25.6rem] relative ">
             <div className=" w-full h-full overflow-hidden ">
               <HeroImg />
@@ -341,10 +341,11 @@ export default function Home() {
       </div>
 
       <div className=" p-[10%] pt-0 pb-[2%] ">
-        <div className=" p-[10%] pt-[6%] pb-[2%] flex flex-col h-fit ">
-          <div className=" flex justify-between items-center ">
+        {/* Feature section */}
+        <div className=" p-[2%] sm:p-[10%] pt-[6%] pb-[2%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center flex-wrap ">
             <div>
-              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+              <h1 className=" mb-4 sm:mb-[2rem]  h-[2.25rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
                 Featured Sports
               </h1>
               <p className=" text-[#74788D] ">what do you need to find?</p>
@@ -358,29 +359,30 @@ export default function Home() {
               View all
             </Button>
           </div>
-          <div className="flex justify-center items-center flex-wrap p-2 ">
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+
+          <div className="flex justify-center items-center lg:flex-nowrap flex-wrap p-2 ">
+            <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-4 ">
               <div className=" p-2 bg-[#F7F7FF] rounded-full ">
                 <BasketBall />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">BasketBall</div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+            <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
               <div className=" p-2 bg-[#F7F7FF] rounded-full ">
                 <FootBall />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">Soccer/Football</div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+            <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
               <div className=" p-2 bg-[#F7F7FF] rounded-full ">
                 <Rugby />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">Rugby League</div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+            <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
               <div className=" p-2 bg-[#F7F7FF] rounded-full ">
                 <WeightLifting />
               </div>
