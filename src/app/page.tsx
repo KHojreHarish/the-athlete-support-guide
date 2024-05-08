@@ -231,7 +231,7 @@ export default function Home() {
             <div className="flex  max-w-fit max-h-fit absolute top-[-20px] left-[-35px] ">
               <HeroimgLines />
             </div>
-            <div className="  max-w-fit max-h-fit absolute top-[-65px] right-[-90px]  ">
+            <div className="  max-w-fit max-h-fit absolute top-[-65px] right-[-90px] ">
               <HeroimgLines2 />
             </div>
             <div className="  max-w-fit max-h-fit absolute left-[-10px] hidden md:flex z-10 ">
@@ -291,7 +291,7 @@ export default function Home() {
                   $20.00<span>/hr</span>
                 </p>
                 <p className=" mb-1">Recovery Therapist</p>
-                <div className="flex items-center">
+                <div className="flex items-center h-3 w-[5rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -314,7 +314,7 @@ export default function Home() {
                   $50.00<span>/hr</span>
                 </p>
                 <p className=" mb-1">Ex Professional Athlete Mentor</p>
-                <div className="flex items-center">
+                <div className="flex items-center h-3 w-[5rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -342,7 +342,8 @@ export default function Home() {
 
       <div className=" p-[10%] pt-0 pb-[2%] ">
         {/* Feature section */}
-        <div className=" p-[2%] sm:p-[10%] pt-[6%] pb-[2%] flex flex-col h-fit ">
+
+        <div className=" p-[2%] sm:p-[10%] pt-[6%] flex flex-col h-fit ">
           <div className=" flex justify-between items-center flex-wrap ">
             <div>
               <h1 className=" mb-4 sm:mb-[2rem]  h-[2.25rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
@@ -362,14 +363,14 @@ export default function Home() {
 
           <div className="flex justify-center items-center lg:flex-nowrap flex-wrap p-2 ">
             <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-4 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+              <div className=" bg-[#F7F7FF] rounded-full ">
                 <BasketBall />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">BasketBall</div>
             </div>
 
             <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+              <div className=" p-1 bg-[#F7F7FF] rounded-full ">
                 <FootBall />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">Soccer/Football</div>
@@ -383,7 +384,7 @@ export default function Home() {
             </div>
 
             <div className=" h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+              <div className=" bg-[#F7F7FF] rounded-full ">
                 <WeightLifting />
               </div>
               <div className=" text-[1rem] font-bold m-3 ">Weight Lifting</div>
@@ -391,13 +392,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" p-[10%] pt-[2%] pb-[2%] flex flex-col h-fit ">
-          <div className=" flex justify-between items-center ">
+        <div className=" p-[2%] sm:p-[10%] !pt-0 pb-[2%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center flex-wrap ">
             <div>
-              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+              <h1 className=" mb-4 sm:mb-[2rem]  h-[2.25rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
                 Featured Services
               </h1>
-              <p className=" text-[#74788D] ">What do you need to find?</p>
+              <p className=" text-[#74788D] ">what do you need to find?</p>
             </div>
             <Button
               size="lg"
@@ -408,36 +409,38 @@ export default function Home() {
               View all
             </Button>
           </div>
-          <div className="flex justify-center items-center flex-wrap p-2 ">
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+
+          <div className="flex  justify-center items-center lg:flex-nowrap flex-wrap p-2 ">
+            <div className=" p-2 px-0 h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-4 ">
+              <div className=" bg-[#F7F7FF] rounded-full ">
                 <InformalLearning />
               </div>
-              <div className=" text-[1rem] font-bold m-3 text-center ">
-                Athlete to Athlete
-                <br /> Mentorship{" "}
+              <div className=" text-[0.8rem] font-bold m-3 ">
+                Athlete to Athlete Mentorship{" "}
               </div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+            <div className=" p-3 h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className="  bg-[#F7F7FF] rounded-full ">
                 <Dumbbell />
               </div>
-              <div className=" text-[1rem] font-bold m-3 ">Strength</div>
+              <div className=" text-[0.8rem] font-bold m-3 ">Strength</div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+            <div className=" p-1 h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" bg-[#F7F7FF] rounded-full ">
                 <Mobility />
               </div>
-              <div className=" text-[1rem] font-bold m-3 ">Mobility</div>
+              <div className=" text-[0.8rem] font-bold m-3 ">Mobility</div>
             </div>
 
-            <div className=" h-[13rem] w-[17rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
-              <div className=" p-2 bg-[#F7F7FF] rounded-full ">
+            <div className=" p-2 h-[ 8.8125rem] w-[14.34375rem] shadow-shadow-hero flex flex-col justify-center items-center m-2 ">
+              <div className=" bg-[#F7F7FF] rounded-full ">
                 <MentalWellness />
               </div>
-              <div className=" text-[1rem] font-bold m-3 ">Mental Wellness</div>
+              <div className=" text-[0.8rem] font-bold m-3 ">
+                Mental Wellness
+              </div>
             </div>
           </div>
         </div>
@@ -462,7 +465,7 @@ export default function Home() {
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
                   />
                 </svg>
@@ -479,7 +482,7 @@ export default function Home() {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
                     />
                   </svg>
@@ -502,15 +505,7 @@ export default function Home() {
                     New Jersey, USA
                   </div>
                   <span className=" flex ">
-                    <Image
-                      as={NextImage}
-                      width={1400}
-                      height={1400}
-                      src="/StarSymbol.svg"
-                      alt="hero-img"
-                      radius="none"
-                      className=" w-full h-4 "
-                    />
+                    <StarSymbol />
                     4.9
                   </span>
                 </div>
@@ -546,15 +541,7 @@ export default function Home() {
                     New Jersey, USA
                   </div>
                   <span className=" flex ">
-                    <Image
-                      as={NextImage}
-                      width={1400}
-                      height={1400}
-                      src="/StarSymbol.svg"
-                      alt="hero-img"
-                      radius="none"
-                      className=" w-full h-4 "
-                    />
+                    <StarSymbol />
                     4.9
                   </span>
                 </div>
@@ -590,15 +577,7 @@ export default function Home() {
                     New Jersey, USA
                   </div>
                   <span className=" flex ">
-                    <Image
-                      as={NextImage}
-                      width={1400}
-                      height={1400}
-                      src="/StarSymbol.svg"
-                      alt="hero-img"
-                      radius="none"
-                      className=" w-full h-4 "
-                    />
+                    <StarSymbol />
                     4.9
                   </span>
                 </div>
@@ -672,51 +651,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center text-sm ">
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/HalfStarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <HalfStarSymbol />
                   (320)
                 </div>
               </div>
@@ -743,51 +682,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center text-sm ">
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/HalfStarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <HalfStarSymbol />
                   (228)
                 </div>
               </div>
@@ -814,51 +713,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center text-sm ">
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/HalfStarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <HalfStarSymbol />
                   (130)
                 </div>
               </div>
@@ -885,51 +744,11 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center text-sm ">
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/StarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
-                  <Image
-                    as={NextImage}
-                    width={100}
-                    height={100}
-                    src="/HalfStarSymbol.svg"
-                    alt="hero-img"
-                    radius="none"
-                    className=" w-4 h-4 "
-                  />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <StarSymbol />
+                  <HalfStarSymbol />
                   (95)
                 </div>
               </div>
