@@ -3,8 +3,12 @@ import { roboto } from "../config/fonts";
 import { Button, Image, Input, Select, SelectItem } from "@nextui-org/react";
 import {
   BasketBall,
+  BlogImg1,
+  BlogImg2,
+  BlogImg3,
   BoxList,
   CheckedSymbol,
+  CheckedSymbol2,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -908,6 +912,286 @@ export default function Home() {
               <p className=" text-[0.875rem] font-normal text-center ">
                 Select the type of catering service you are looking for
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing section */}
+      <div className=" flex flex-col justify-center items-center text-[#F9F9F9] my-8  ">
+        <div className=" text-center mb-8 ">
+          {" "}
+          <h1 className=" text-[1.875rem] text-[#28283C] font-bold ">
+            Pricing Plans
+          </h1>
+          <p className=" text-[0.75rem] text-[#74788D] font-normal ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+        <div className=" flex flex-wrap justify-center items-center w-full h-full ">
+          <div className=" h-[27rem] flex items-end ">
+            <div className=" p-1 w-[19.5rem] h-[23rem] flex flex-col items-center text-black rounded-xl border-2 m-4 ">
+              <div className=" p-2 flex flex-col items-center ">
+                <h1 className=" text-[1.125rem] font-bold m-0.5 ">Basic</h1>
+                <p className=" text-[0.65rem] font-[400] text-[#74788D] m-0.5 ">
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+                <h1 className="  text-[1.125rem] font-bold m-0.5 ">
+                  $50
+                  <span className=" text-[0.609rem] text-[#C2C9D1] ">
+                    /month
+                  </span>
+                </h1>
+              </div>
+              <div className=" h-0.5 w-[90%] bg-slate-100 m-3 "></div>
+              <div className=" flex flex-col justify-center items-start p-3 ">
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 opacity-[0.2] ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 opacity-[0.2] ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 opacity-[0.2] ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+              </div>
+              <Button
+                size="md"
+                color="primary"
+                radius="none"
+                className=" rounded bg-[#FF3F01] pr-[3rem] "
+              >
+                Get Started
+              </Button>
+            </div>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center w-fit h-[28rem]  ">
+            <h1 className=" text-black text-base h-8 font-bold mt-4 ">
+              Popular
+            </h1>
+            <div className=" p-1 w-[19.5rem] h-[23rem] flex flex-col items-center text-black rounded-xl border-2 mt-0 m-4 shadow-shadow-hero ">
+              <div className=" p-2 flex flex-col items-center ">
+                <h1 className=" text-[1.125rem] font-bold m-0.5 ">Standard</h1>
+                <p className=" text-[0.65rem] font-[400] text-[#74788D] m-0.5 ">
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+                <h1 className="  text-[1.125rem] font-bold m-0.5 ">
+                  $100
+                  <span className=" text-[0.609rem] text-[#C2C9D1] ">
+                    /month
+                  </span>
+                </h1>
+              </div>
+              <div className=" h-0.5 w-[90%] bg-slate-100 m-3 "></div>
+              <div className=" flex flex-col justify-center items-start p-3 ">
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5  ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5  ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 opacity-[0.2] ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+              </div>
+              <Button
+                size="md"
+                color="primary"
+                radius="none"
+                className=" rounded bg-[#FF3F01] pr-[3rem] "
+              >
+                Get Started
+              </Button>
+            </div>
+          </div>
+
+          <div className=" h-[27rem] flex items-end ">
+            <div className=" p-1 w-[19.5rem] h-[23rem] flex flex-col items-center text-black rounded-xl border-2 m-4 ">
+              <div className=" p-2 flex flex-col items-center ">
+                <h1 className=" text-[1.125rem] font-bold m-0.5 ">Premium</h1>
+                <p className=" text-[0.65rem] font-[400] text-[#74788D] m-0.5 ">
+                  Lorem ipsum dolor sit amet, consectetur
+                </p>
+                <h1 className="  text-[1.125rem] font-bold m-0.5 ">
+                  $150
+                  <span className=" text-[0.609rem] text-[#C2C9D1] ">
+                    /month
+                  </span>
+                </h1>
+              </div>
+              <div className=" h-0.5 w-[90%] bg-slate-100 m-3 "></div>
+              <div className=" flex flex-col justify-center items-start p-3 ">
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+
+                <div className=" flex justify-center items-center my-0.5 ">
+                  <CheckedSymbol2 />
+                  <h1 className=" text-xs m-1 ">
+                    Sed perspiciatis unde omnis natus error
+                  </h1>
+                </div>
+              </div>
+              <Button
+                size="md"
+                color="primary"
+                radius="none"
+                className=" rounded bg-[#FF3F01] pr-[3rem] "
+              >
+                Get Started
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Blog section */}
+      <div className=" my-8 flex flex-col justify-center items-center ">
+        <div className=" text-center m-8 ">
+          <h1 className=" text-[1.875rem] text-[#28283C] font-bold ">
+            Latest Blog
+          </h1>
+          <p className=" text-[0.75rem ] text-[#74788D] font-[400] ">
+            Lorem ipsum dolor sit amet, consectetur elit
+          </p>
+        </div>
+        <div className=" flex flex-wrap justify-center items-center ">
+          <div className=" w-[18.375rem] h-[19.67063rem] p-4 rounded-xl flex flex-col m-2 overflow-hidden ">
+            <div className=" w-full ">
+              <BlogImg1 />
+            </div>
+            <div className=" flex flex-col mt-2 p-2 ">
+              <div className=" flex justify-evenly text-[0.75rem] text-[#74788D] ">
+                <span>09 Aug 2023</span>
+                <span>Hal Lewis</span>
+              </div>
+              <div className=" text-[0.9375rem] text-[#28283C] font-bold ">
+                How to Choose a Electrical ServiceProvider?
+              </div>
+            </div>
+          </div>
+          <div className=" w-[18.375rem] h-[19.67063rem] p-4 rounded-xl flex flex-col m-2 overflow-hidden ">
+            <div className=" w-full ">
+              <BlogImg2 />
+            </div>
+            <div className=" flex flex-col mt-2 p-2 ">
+              <div className=" flex justify-evenly text-[0.75rem] text-[#74788D] ">
+                <span>09 Aug 2023</span>
+                <span>JohnDoe</span>
+              </div>
+              <div className=" text-[0.9375rem] text-[#28283C] font-bold ">
+                How to Choose a Electrical ServiceProvider?
+              </div>
+            </div>
+          </div>
+          <div className=" w-[18.375rem] h-[19.67063rem] p-4 rounded-xl flex flex-col m-2 overflow-hidden ">
+            <div className=" w-full ">
+              <BlogImg3 />
+            </div>
+            <div className=" flex flex-col mt-2 p-2 ">
+              <div className=" flex justify-evenly text-[0.75rem] text-[#74788D] ">
+                <span>09 Aug 2023</span>
+                <span>Greg Avery</span>
+              </div>
+              <div className=" text-[0.9375rem] text-[#28283C] font-bold ">
+                Construction Service Scams: How to Avoid Them
+              </div>
             </div>
           </div>
         </div>
