@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@splidejs/react-splide/css";
 
 *::-webkit-scrollbar {
   width: 10px;
@@ -64,4 +63,16 @@
     stroke-dasharray: 1000 1000;
     stroke-dashoffset: 0;
   }
+}
+
+/* Review Carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
 }

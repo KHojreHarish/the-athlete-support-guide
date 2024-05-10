@@ -47,9 +47,9 @@ import {
   WorkingStepsImg3,
   WorkingStepsImg4,
 } from "@/components/icons";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Poppins } from "next/font/google";
 import Link from "next/link";
+import useEmblaCarousel from "embla-carousel-react";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "500" });
 
@@ -115,6 +115,8 @@ const animals = [
 ];
 
 export default function Home() {
+  const [emblaRef] = useEmblaCarousel();
+  useEmblaCarousel.globalOptions = { loop: true };
   return (
     <>
       {/* Hero section */}
@@ -769,14 +771,19 @@ export default function Home() {
             <ReviewImage1 />
           </div>
           <div className=" w-[45.25rem] h-fit max-w-full flex justify-center items-center ">
-            <Splide aria-label="My Favorite Images">
-              <SplideSlide>
-                <MainReviewImage />
-              </SplideSlide>
-              <SplideSlide>
-                <MainReviewImage />
-              </SplideSlide>
-            </Splide>{" "}
+            <div className="embla" ref={emblaRef}>
+              <div className="embla__container">
+                <div className="embla__slide">
+                  <MainReviewImage />
+                </div>
+                <div className="embla__slide">
+                  <MainReviewImage />
+                </div>
+                <div className="embla__slide">
+                  <MainReviewImage />
+                </div>
+              </div>
+            </div>
           </div>
           <div className=" max-w-full h-full w-[18rem] md:flex hidden ">
             <ReviewImage2 />
