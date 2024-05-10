@@ -36,8 +36,9 @@ const NavbarComponent = () => {
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
       isBlurred={true}
-      height={"5rem"}
-      className={`${roboto.className} drop-shadow-xl bg-[#fff]`}
+      height={"4.5rem"}
+      maxWidth={"xl"}
+      className={`${roboto.className} drop-shadow-xl bg-[#fff] md:max-h-[4rem] lg:max-h-[5rem] `}
     >
       <NavbarContent className="md:hidden" justify="start">
         <NavbarMenuToggle
@@ -51,20 +52,24 @@ const NavbarComponent = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarBrand className="hidden md:flex gap-4 ">
-        <TaspLogo />
-      </NavbarBrand>
-
       <NavbarContent
         className="hidden md:flex md:gap-5 lg:gap-10 sm:gap-8 "
+        justify="start"
+      >
+        <NavbarBrand className=" h-[3.5rem] w-[8rem] ">
+          <TaspLogo />
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent
         justify="center"
+        className="hidden md:flex md:gap-5 lg:gap-10 sm:gap-8 "
       >
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent  md:text-[1.3rem] lg:text-[1.5rem] "
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent  md:text-[1rem] lg:text-[1.2rem] "
                 endContent={<ChevronDown />}
                 radius="sm"
                 variant="light"
@@ -117,7 +122,7 @@ const NavbarComponent = () => {
           <Link
             color="foreground"
             href="#"
-            className=" md:text-[1.3rem] lg:text-[1.5rem]"
+            className=" md:text-[1rem] lg:text-[1.2rem]"
           >
             Hire Your Support
           </Link>
@@ -126,26 +131,26 @@ const NavbarComponent = () => {
           <Link
             style={{ color: "#FF3F01" }}
             href="#"
-            className=" md:text-[1.3rem] lg:text-[1.5rem]"
+            className=" md:text-[1rem] lg:text-[1.2rem]"
           >
             Share Your Expertise
           </Link>
         </NavbarItem>
-        <NavbarItem className=" md:text-[1.3rem] lg:text-[1.5rem]">
+        <NavbarItem className=" md:text-[1rem] lg:text-[1.2rem]">
           <button>Login Now</button>
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className=" xl:mr-[-15%] xl:ml-[15%] ">
+      <NavbarContent justify="end" className=" ">
         <NavbarItem>
           <Button
             as={Link}
             style={{ backgroundColor: "#FF3F01", color: "white" }}
             href="#"
-            size="lg"
+            size="md"
             variant="flat"
             startContent={<ProfileIcon />}
-            className=" rounded-sm md:text-[1rem] lg:text-[1.5rem]"
+            className=" rounded-[5px] md:text-[1rem] lg:text-[1rem]"
           >
             Join Now
           </Button>
@@ -155,7 +160,7 @@ const NavbarComponent = () => {
             href="#"
             color="foreground"
             underline="hover"
-            className=" text-[1.5rem] "
+            className=" text-[1.2rem] "
           >
             Register
           </Link>
