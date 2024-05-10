@@ -5,6 +5,9 @@ import {
   BasketBall,
   BoxList,
   CheckedSymbol,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Dumbbell,
   ExpertImg,
   ExpertImg2,
@@ -20,18 +23,31 @@ import {
   HighlightCard2Img,
   HighlightCard3Img,
   InformalLearning,
+  MainReviewImage,
   MentalWellness,
   Mobility,
+  OfferMainImg,
+  ReviewImage1,
+  ReviewImage2,
   Rugby,
+  SeeHowItWorkImage1,
+  SeeHowItWorkImage2,
+  SeeHowItWorkLine,
   Service1Img,
   Star,
   StarSymbol,
   UserVerified,
   WeightLifting,
+  WorkingStepsImg1,
+  WorkingStepsImg2,
+  WorkingStepsImg3,
+  WorkingStepsImg4,
 } from "@/components/icons";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
-import { useEffect } from "react";
-import NextImage from "next/image";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Poppins } from "next/font/google";
+import Link from "next/link";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "500" });
 
 const animals = [
   {
@@ -98,9 +114,9 @@ export default function Home() {
   return (
     <>
       {/* Hero section */}
-      <div className="flex flex-wrap p-[5vw] pr-0 justify-around xl:justify-center gap-0 ">
-        <div className="flex flex-col h-[30rem] w-[35rem] lg:mr-12 ">
-          <h1 className=" text-[3rem] w-full font-bold leading-[3.5rem] ">
+      <div className="flex flex-wrap p-[5vw] pr-0 justify-around xl:justify-center gap-0 overflow-hidden ">
+        <div className="flex flex-col h-full sm:h-[30rem] max-w-full w-[35rem] lg:mr-12 ">
+          <h1 className=" text-[2rem] sm:text-[3rem] w-full font-bold leading-[2.5rem] sm:leading-[3.5rem] ">
             Find Your Edge.
             <br /> Athlete <span className=" text-[#FF3F01] ">
               Mentorship
@@ -116,7 +132,7 @@ export default function Home() {
             We’ve helped over 10,000+ athletes achieve their goals.
             <br /> Find the perfect service for your journey.
           </h3>
-          <form className="  flex items-center p-2 mt-4 border-[2px] border-[#f0ecec7d] rounded-[30px] ">
+          <form className="  flex items-center  flex-wrap sm:flex-nowrap p-2 mt-4 border-[2px] border-[#f0ecec7d] rounded-[30px] ">
             {" "}
             <Select
               items={animals}
@@ -188,7 +204,7 @@ export default function Home() {
             <Button
               type="submit"
               size="lg"
-              className=" m-2 bg-[#FF3F01]"
+              className=" m-2 bg-[#FF3F01] w-full "
               radius="full"
             >
               <svg
@@ -205,7 +221,7 @@ export default function Home() {
               </svg>
             </Button>
           </form>
-          <div className="flex w-full sm:w-[70%] m-4 justify-between">
+          <div className="flex sm:w-[70%] m-4 justify-between">
             <div className=" flex flex-col">
               <BoxList /> <h5 className=" font-bold  mt-4">3000+</h5>{" "}
               <h6 className=" font-[300] ">Services</h6>
@@ -213,7 +229,9 @@ export default function Home() {
             <div className=" flex flex-col">
               <UserVerified />
               <h5 className=" font-bold  mt-4">900+</h5>{" "}
-              <h6 className=" font-[300] ">Athlete Mentors</h6>
+              <h6 className=" font-[300] w-[3rem] sm:w-fit ">
+                Athlete Mentors
+              </h6>
             </div>
             <div className=" flex flex-col">
               <Star />
@@ -223,7 +241,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" flex justify-center h-fit w-fit md:w-[25rem] lg:w-fit ">
+        <div className=" flex justify-center h-[20rem] sm:h-fit w-[10rem] sm:w-fit md:w-[25rem] lg:w-fit max-w-full ">
           <div className=" w-[13.5rem] h-[25.6rem] relative ">
             <div className=" w-full h-full overflow-hidden ">
               <HeroImg />
@@ -240,11 +258,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center ">
-          <h1 className=" text-[3rem] h-[15rem ] font-[500] flex flex-col leading-[3.6rem] relative ">
+        <div className="flex flex-col items-center max-w-full ">
+          <h1 className=" text-[2rem] sm:text-[3rem] h-[15rem ] font-[500] flex flex-col sm:leading-[3.6rem] relative ">
             <span className=" relative">
               <svg
-                className="defensive-svg absolute top-[-10px] left-[-32px]"
+                className=" absolute w-[200px] sm:w-[299px] sm:h-[93px] sm:top-[-10px] left-[-32px]"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 299 93"
               >
@@ -264,7 +282,7 @@ export default function Home() {
               height="175"
               viewBox="0 0 25 188"
               fill="none"
-              className=" absolute right-[50px] top-[80px] "
+              className=" absolute w-[18px] sm:w-[25px] right-[30px] sm:right-[50px] top-[40px] sm:top-[80px] "
             >
               <path
                 d="M2.00001 2.50815C7.90801 30.679 20.2046 106.692 22.1271 185.379"
@@ -274,11 +292,11 @@ export default function Home() {
               />
             </svg>
           </h1>
-          <h1 className=" text-[2rem] font-[400] mt-[1rem] mr-[-25%] ">
+          <h1 className=" text-[1rem] sm:text-[2rem] font-[400] mt-[1rem] mr-[-25%] ">
             *it takes a team
           </h1>
-          <div className=" flex  flex-wrap justify-center">
-            <div className=" flex flex-col items-center w-[10rem] h-[11.6rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
+          <div className=" flex justify-center overflow-x-auto ">
+            <div className=" flex flex-col items-center sm:w-[10rem] h-[11.6rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <HighlightCard1Img />
               <div className=" text-[0.5rem] w-full  relative ">
                 <h1 className="flex items-center font-bold mb-1 ">
@@ -395,7 +413,7 @@ export default function Home() {
         <div className=" p-[2%] sm:p-[10%] !pt-0 pb-[2%] flex flex-col h-fit ">
           <div className=" flex justify-between items-center flex-wrap ">
             <div>
-              <h1 className=" mb-4 sm:mb-[2rem]  h-[2.25rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
+              <h1 className=" mb-4 sm:mb-[2rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
                 Featured Services
               </h1>
               <p className=" text-[#74788D] ">what do you need to find?</p>
@@ -415,7 +433,7 @@ export default function Home() {
               <div className=" bg-[#F7F7FF] rounded-full ">
                 <InformalLearning />
               </div>
-              <div className=" text-[0.8rem] font-bold m-3 ">
+              <div className=" text-[0.8rem] text-center font-bold m-3 ">
                 Athlete to Athlete Mentorship{" "}
               </div>
             </div>
@@ -445,153 +463,126 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" p-[10%] pt-[2%] pb-[2%]  flex flex-col h-fit ">
-          <div className=" flex justify-between items-center ">
+        <div className=" p-[2%] sm:p-[10%] !pt-0 pb-[5%] flex flex-col h-fit ">
+          <div className=" flex justify-between flex-wrap ">
             <div>
-              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+              <h1 className=" mb-4 sm:mb-[2rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
                 Featured Services Near You
               </h1>
               <p className=" text-[#74788D] ">
                 Explore the greates our services. You won’t be disappointed
               </p>
             </div>
-            <div>
-              <Button radius="full" size="lg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
-                  />
-                </svg>
-              </Button>
-              <Button
-                size="lg"
-                radius="full"
-                endContent={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
-                    />
-                  </svg>
-                }
-              />
+            <div className=" flex justify-between ">
+              <button className=" m-2 w-[1.5rem] h-[1.5rem] p-2 rounded-full shadow-hero-btn ">
+                <ChevronLeft />
+              </button>
+              <button className=" m-2 w-[1.5rem] h-[1.5rem] p-2 rounded-full shadow-hero-btn ">
+                <ChevronRight />
+              </button>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-wrap p-2 ">
-            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
-              <div className=" w-full  ">
+
+          <div className="flex justify-center items-center flex-wrap p-2  ">
+            <div className=" w-[18.375rem] h-[19.67063rem] border-2 rounded-xl flex flex-col m-2 overflow-hidden ">
+              <div className=" w-full ">
                 <Service1Img />
               </div>
-              <div className=" flex flex-col p-4">
-                <div className=" text-xl font-bold w-[70%] ">
+              <div className=" flex flex-col p-2 ">
+                <div className=" w-[12.75]  leading-4 font-bold ">
                   Professional Soccer Player Video Analysis 30 mins
                 </div>
                 <div className=" flex justify-between h-8 ">
                   {" "}
-                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                  <div className=" max-w-[7rem] h-[1.9375] pl-2 text-[#74788D] text-[0.75rem] ">
                     New Jersey, USA
                   </div>
-                  <span className=" flex ">
+                  <span className=" flex text-[0.75rem] h-[1rem] ">
                     <StarSymbol />
                     4.9
                   </span>
                 </div>
-                <div className="flex justify-between mt-3 ">
-                  <div className=" text-xl font-bold ">
+                <div className="flex justify-between ">
+                  <div className=" text-base font-bold ">
                     $25.00
-                    <span className=" text-sm font-light line-through ">
+                    <span className=" text-[0.7rem] font-light line-through ">
                       $35.00
                     </span>
                   </div>{" "}
                   <Button
                     radius="none"
                     size="sm"
-                    className=" text-[#FF3F01] rounded  m-0 "
+                    className=" text-[#FF3F01] m-0 rounded p-2 max-w-[5rem] max-h-[2rem] "
                   >
                     Book Now
                   </Button>
                 </div>
               </div>
             </div>
-
-            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
-              <div className=" w-full  ">
+            <div className=" w-[18.375rem] h-[19.67063rem] border-2 rounded-xl flex flex-col m-2 overflow-hidden ">
+              <div className=" w-full ">
                 <Service1Img />
               </div>
-              <div className=" flex flex-col p-4">
-                <div className=" text-xl font-bold w-[70%] ">
+              <div className=" flex flex-col p-2 ">
+                <div className=" w-[12.75] leading-4 font-bold ">
                   Professional Soccer Player Video Analysis 30 mins
                 </div>
                 <div className=" flex justify-between h-8 ">
                   {" "}
-                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                  <div className=" max-w-[7rem] h-[1.9375] pl-2 text-[#74788D] text-[0.75rem] ">
                     New Jersey, USA
                   </div>
-                  <span className=" flex ">
+                  <span className=" flex text-[0.75rem] h-[1rem] ">
                     <StarSymbol />
                     4.9
                   </span>
                 </div>
-                <div className="flex justify-between mt-3 ">
-                  <div className=" text-xl font-bold ">
+                <div className="flex justify-between ">
+                  <div className=" text-base font-bold ">
                     $25.00
-                    <span className=" text-sm font-light line-through ">
+                    <span className=" text-[0.7rem] font-light line-through ">
                       $35.00
                     </span>
                   </div>{" "}
                   <Button
                     radius="none"
                     size="sm"
-                    className=" text-[#FF3F01] rounded  m-0 "
+                    className=" text-[#FF3F01] m-0 rounded p-2 max-w-[5rem] max-h-[2rem] "
                   >
                     Book Now
                   </Button>
                 </div>
               </div>
             </div>
-
-            <div className=" w-[25rem] h-[30rem] border-2 rounded-xl flex flex-col  ">
-              <div className=" w-full  ">
+            <div className=" w-[18.375rem] h-[19.67063rem] border-2 rounded-xl flex flex-col m-2 overflow-hidden ">
+              <div className=" w-full ">
                 <Service1Img />
               </div>
-              <div className=" flex flex-col p-4">
-                <div className=" text-xl font-bold w-[70%] ">
+              <div className=" flex flex-col p-2 ">
+                <div className=" w-[12.75] leading-4 font-bold ">
                   Professional Soccer Player Video Analysis 30 mins
                 </div>
                 <div className=" flex justify-between h-8 ">
                   {" "}
-                  <div className=" max-w-[9rem] pl-2 text-[1rem] ">
+                  <div className=" max-w-[7rem] h-[1.9375] pl-2 text-[#74788D] text-[0.75rem] ">
                     New Jersey, USA
                   </div>
-                  <span className=" flex ">
+                  <span className=" flex text-[0.75rem] h-[1rem] ">
                     <StarSymbol />
                     4.9
                   </span>
                 </div>
-                <div className="flex justify-between mt-3 ">
-                  <div className=" text-xl font-bold ">
+                <div className="flex justify-between ">
+                  <div className=" text-base font-bold ">
                     $25.00
-                    <span className=" text-sm font-light line-through ">
+                    <span className=" text-[0.7rem] font-light line-through ">
                       $35.00
                     </span>
                   </div>{" "}
                   <Button
                     radius="none"
                     size="sm"
-                    className=" text-[#FF3F01] rounded  m-0 "
+                    className=" text-[#FF3F01] m-0 rounded p-2 max-w-[5rem] max-h-[2rem] "
                   >
                     Book Now
                   </Button>
@@ -599,6 +590,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className=" flex w-full justify-center items-center ">
             <Button
               size="lg"
@@ -611,10 +603,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" p-[10%] pt-[2%] pb-[2%] flex flex-col h-fit ">
-          <div className=" flex justify-between items-center ">
+        <div className=" p-[2%] sm:p-[10%] !pt-0 pb-[5%] flex flex-col h-fit ">
+          <div className=" flex justify-between items-center flex-wrap ">
             <div>
-              <h1 className=" mb-[2rem]  h-[2.25rem] font-Poppins text-[3rem] font-[600] leading-[2.25rem] ">
+              <h1 className="  mb-4 sm:mb-[2rem] font-Poppins text-[1.95rem] sm:text-[3rem] font-[600] leading-[2.25rem] ">
                 Top Providers
               </h1>
               <p className=" text-[#74788D] ">Meet Our Experts</p>
@@ -628,13 +620,13 @@ export default function Home() {
               View all
             </Button>
           </div>
-          <div className="flex justify-center items-center flex-wrap p-2 ">
-            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+          <div className="flex justify-center items-center lg:flex-nowrap flex-wrap p-1 ">
+            <div className=" flex flex-col items-center w-[14.3rem] h-[18.1rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <ExpertImg />
               <div className=" text-[0.5rem] w-full  relative ">
                 <div className=" flex justify-between mb-2 mt-3 ">
                   <div>
-                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                    <h1 className=" flex items-center text-base font-bold h-4 ">
                       Jo Smith{" "}
                       <span className="">
                         <CheckedSymbol />
@@ -650,7 +642,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex items-center text-sm ">
+                <div className="flex items-center text-sm h-3 w-[6rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -660,12 +652,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+            <div className=" flex flex-col items-center w-[14.3rem] h-[18.1rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <ExpertImg2 />
               <div className=" text-[0.5rem] w-full  relative ">
                 <div className=" flex justify-between mb-2 mt-3 ">
                   <div>
-                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                    <h1 className="flex items-center text-base font-bold h-4 ">
                       Michael
                       <span className="">
                         <CheckedSymbol />
@@ -681,7 +673,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex items-center text-sm ">
+                <div className="flex items-center text-sm h-3 w-[6rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -691,12 +683,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+            <div className=" flex flex-col items-center w-[14.3rem] h-[18.1rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <ExpertImg3 />
               <div className=" text-[0.5rem] w-full  relative ">
                 <div className=" flex justify-between mb-2 mt-3 ">
                   <div>
-                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                    <h1 className="flex items-center text-base font-bold h-4 ">
                       Antoinette
                       <span className="">
                         <CheckedSymbol />
@@ -712,7 +704,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex items-center text-sm ">
+                <div className="flex items-center text-sm h-3 w-[6rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -722,12 +714,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center w-[16rem] h-[20rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-2 mb-0 p-2">
+            <div className=" flex flex-col items-center w-[14.3rem] h-[18.1rem] border-2 border-[rgba(0, 0, 0, 0.30)] rounded m-1 mb-0 p-2">
               <ExpertImg4 />
               <div className=" text-[0.5rem] w-full  relative ">
                 <div className=" flex justify-between mb-2 mt-3 ">
                   <div>
-                    <h1 className=" text-xl flex items-center font-bold h-4 ">
+                    <h1 className="flex items-center text-base font-bold h-4 ">
                       Thompson
                       <span className="">
                         <CheckedSymbol />
@@ -743,7 +735,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex items-center text-sm ">
+                <div className="flex items-center text-sm h-3 w-[6rem] ">
                   <StarSymbol />
                   <StarSymbol />
                   <StarSymbol />
@@ -757,8 +749,168 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" w-full h-[46rem] p-8 bg-[#FFF9F9] ">
-        <div></div>
+      <div className="flex flex-col justify-end items-center w-full p-0 sm:p-8 md:p-16 bg-[#FFF9F9] ">
+        <div className=" flex flex-col justify-center items-center mb-16 ">
+          <h4 className=" text-base text-[#FF3F01] font-[400] ">
+            OUR LATEST ARTICLES
+          </h4>
+          <h1
+            className={`${poppins.className} text-[2.5rem] font-bold text-center `}
+          >
+            Customer Reviews
+          </h1>
+        </div>
+        <div className=" flex w-[81rem] max-w-full h-fit sm:h-[25rem] flex-wrap sm:flex-nowrap ">
+          <div className=" max-w-full h-full w-[18rem] md:flex hidden ">
+            <ReviewImage1 />
+          </div>
+          <div className=" w-[45.25rem] h-fit max-w-full flex justify-center items-center ">
+            <Splide aria-label="My Favorite Images">
+              <SplideSlide>
+                <MainReviewImage />
+              </SplideSlide>
+              <SplideSlide>
+                <MainReviewImage />
+              </SplideSlide>
+            </Splide>{" "}
+          </div>
+          <div className=" max-w-full h-full w-[18rem] md:flex hidden ">
+            <ReviewImage2 />
+          </div>
+        </div>
+      </div>
+
+      <div className=" flex justify-end items-center flex-wrap m-16 rounded-[50px] bg-[#FF3F01]  min-h-[25.6rem] relative ">
+        <div className=" hidden sm:block absolute bottom-[0px] left-5 w-1/4 ">
+          <OfferMainImg />
+        </div>
+        <div className=" w-[65%] p-6 ">
+          <div className=" max-w-[40rem] ">
+            <h1 className=" text-[2.375rem] font-[600] text-white ">
+              We Are Offering 14 Days Free Trial
+            </h1>
+            <p className=" text-[1.125rem] font-[400] text-white ">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore minim veniam, quis
+              nostrud exercitation ullamco magna aliqua.
+            </p>
+            <Link href={"#"}>Try 14 Days Free Trial</Link>
+          </div>
+        </div>
+      </div>
+
+      <div className=" flex flex-col p-[3.75rem] ">
+        <div className=" my-12 text-[2.5rem] font-[600] ">See How It Works</div>
+        <div className=" flex justify-evenly items-center flex-wrap ">
+          <div className=" flex flex-col items-center w-fit ">
+            <div className=" w-[5rem] h-[5rem] relative rounded-xl bg-[#ff008a80] rotate-[14deg] ">
+              <span className=" flex justify-center items-center text-[3.125rem] text-white font-semibold absolute w-[5rem] h-[5rem] rounded-xl bg-[#ff008a80] rotate-[-14deg] ">
+                01
+              </span>
+            </div>
+            <div className=" m-6 ">
+              <SeeHowItWorkLine />
+            </div>
+            <SeeHowItWorkImage1 />
+          </div>
+          <div className=" flex flex-col items-center w-fit ">
+            <div className=" w-[5rem] h-[5rem] relative rounded-xl bg-[#ff008a80] rotate-[14deg] ">
+              <span className=" flex justify-center items-center text-[3.125rem] text-white font-semibold absolute w-[5rem] h-[5rem] rounded-xl bg-[#ff008a80] rotate-[-14deg] ">
+                02
+              </span>
+            </div>
+            <div className=" m-6  ">
+              <SeeHowItWorkLine />
+            </div>
+            <div className=" w-fit h-fit ">
+              <SeeHowItWorkImage2 />
+            </div>
+          </div>
+          <div className=" flex flex-col items-center w-fit ">
+            <div className=" w-[5rem] h-[5rem] relative rounded-xl bg-[#ff008a80] rotate-[14deg] ">
+              <span className=" flex justify-center items-center text-[3.125rem] text-white font-semibold absolute w-[5rem] h-[5rem] rounded-xl bg-[#ff008a80] rotate-[-14deg] ">
+                01
+              </span>
+            </div>
+            <div className=" m-6 ">
+              <SeeHowItWorkLine />
+            </div>
+            <SeeHowItWorkImage1 />
+          </div>
+        </div>
+      </div>
+
+      <div className=" flex flex-col items-center my-8 bg-[#F9F9F9] min-h-[37rem] py-[5rem] px-[3.75rem] ">
+        <div className=" flex flex-col items-center ">
+          <h6 className=" text-[#74788D] text-[1rem] font-normal ">
+            Working Steps
+          </h6>
+          <h1 className=" text-[2rem] font-semibold text-black ">
+            How we are Working
+          </h1>
+        </div>
+        <div className=" flex justify-center items-center flex-wrap m-4 ">
+          <div className=" w-[15rem] sm:w-[19rem] h-[16rem] sm:h-[20rem] flex flex-col justify-center items-center bg-[#FF3F01] rounded-[0.625rem] p-4 m-4 text-white ">
+            <h5 className="  mb-7 ">Step 1</h5>
+            <div className=" w-[6.375rem] p-[1.25rem] bg-white rounded-[0.625rem] mb-7 ">
+              <WorkingStepsImg1 />
+            </div>
+            <div className=" bg-[#FFB800] h-1 w-[2.68rem] mb-7 " />
+            <div className="   ">
+              <h1 className=" text-[1.125rem] font-bold text-center ">
+                choose a service category
+              </h1>
+              <p className=" text-[0.875rem] font-normal text-center ">
+                Select the type of catering service you are looking for
+              </p>
+            </div>
+          </div>
+          <div className=" w-[15rem] sm:w-[19rem] h-[16rem] sm:h-[20rem] flex flex-col justify-center items-center bg-[#FF3F01] rounded-[0.625rem] p-4 m-4 text-white ">
+            <h5 className="  mb-7 ">Step 2</h5>
+            <div className=" w-[6.375rem] p-[1.25rem] bg-white rounded-[0.625rem] mb-7 ">
+              <WorkingStepsImg2 />
+            </div>
+            <div className=" bg-[#FFB800] h-1 w-[2.68rem] mb-7 " />
+            <div className="   ">
+              <h1 className=" text-[1.125rem] font-bold text-center ">
+                choose a service category
+              </h1>
+              <p className=" text-[0.875rem] font-normal text-center ">
+                Select the type of catering service you are looking for
+              </p>
+            </div>
+          </div>
+          <div className=" w-[15rem] sm:w-[19rem] h-[16rem] sm:h-[20rem] flex flex-col justify-center items-center bg-[#FF3F01] rounded-[0.625rem] p-4 m-4 text-white ">
+            <h5 className="  mb-7 ">Step 3</h5>
+            <div className=" w-[6.375rem] p-[1.25rem] bg-white rounded-[0.625rem] mb-7 ">
+              <WorkingStepsImg3 />
+            </div>
+            <div className=" bg-[#FFB800] h-1 w-[2.68rem] mb-7 " />
+            <div className="   ">
+              <h1 className=" text-[1.125rem] font-bold text-center ">
+                choose a service category
+              </h1>
+              <p className=" text-[0.875rem] font-normal text-center ">
+                Select the type of catering service you are looking for
+              </p>
+            </div>
+          </div>
+          <div className=" w-[15rem] sm:w-[19rem] h-[16rem] sm:h-[20rem] flex flex-col justify-center items-center bg-[#FF3F01] rounded-[0.625rem] p-4 m-4 text-white ">
+            <h5 className="  mb-7 ">Step 4</h5>
+            <div className=" w-[6.375rem] p-[1.25rem] bg-white rounded-[0.625rem] mb-7 ">
+              <WorkingStepsImg4 />
+            </div>
+            <div className=" bg-[#FFB800] h-1 w-[2.68rem] mb-7 " />
+            <div className="   ">
+              <h1 className=" text-[1.125rem] font-bold text-center ">
+                choose a service category
+              </h1>
+              <p className=" text-[0.875rem] font-normal text-center ">
+                Select the type of catering service you are looking for
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
